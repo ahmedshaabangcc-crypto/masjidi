@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- GitHub Pages serves http:// too; always move to https before loading anything. -->
+  <script>if (location.protocol === 'http:' && location.hostname !== 'localhost' && !/^\d+\.\d+\.\d+\.\d+$/.test(location.hostname)) location.replace('https://' + location.host + location.pathname + location.search + location.hash);</script>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="/">
+
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="مسجدي من مُجتمعي: مواقيت الصلاة لمكانك بحساب الهيئة المصرية العامة للمساحة، وأقرب مسجد ليك، ومواعيد الإقامة وخطبة الجمعة والدروس وحلقات القرآن وإعلانات مسجدك — ببلاش.">
+  <meta name="keywords" content="مُجتمعي, مجتمعي, سوق مستعمل, محلات الحي, عقارات, وظائف, صيانة, عنوان إلكتروني, مصر">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://masjid.mogtama3y.com/">
+
+  <!-- Open Graph / social sharing preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="مسجدي">
+  <meta property="og:title" content="مسجدي — كل مساجد حيّك">
+  <meta property="og:description" content="مسجدي من مُجتمعي: مواقيت الصلاة لمكانك بحساب الهيئة المصرية العامة للمساحة، وأقرب مسجد ليك، ومواعيد الإقامة وخطبة الجمعة والدروس وحلقات القرآن وإعلانات مسجدك — ببلاش.">
+  <meta property="og:url" content="https://masjid.mogtama3y.com/">
+  <meta property="og:image" content="https://mogtama3y.com/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="ar_EG">
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="مسجدي — كل مساجد حيّك">
+  <meta name="twitter:description" content="مسجدي من مُجتمعي: مواقيت الصلاة لمكانك بحساب الهيئة المصرية العامة للمساحة، وأقرب مسجد ليك، ومواعيد الإقامة وخطبة الجمعة والدروس وحلقات القرآن وإعلانات مسجدك — ببلاش.">
+  <meta name="twitter:image" content="https://mogtama3y.com/og.jpg">
+
+  <meta name="theme-color" content="#0B1530">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://mogtama3y.com/#org","name":"مُجتمعي","url":"https://mogtama3y.com/","logo":"https://mogtama3y.com/icons/Icon-512.png","email":"mogtama3y.eg@gmail.com","areaServed":"EG"},{"@type":"WebSite","@id":"https://mogtama3y.com/#site","name":"مُجتمعي","url":"https://mogtama3y.com/","inLanguage":"ar","publisher":{"@id":"https://mogtama3y.com/#org"}},{"@type":"SoftwareApplication","name":"مُجتمعي","url":"https://mogtama3y.com/","applicationCategory":"LifestyleApplication","operatingSystem":"Web, Android, iOS (من المتصفح)","inLanguage":"ar","offers":{"@type":"Offer","price":"0","priceCurrency":"EGP"},"publisher":{"@id":"https://mogtama3y.com/#org"}}]}</script>
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="مسجدي">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>مسجدي — كل مساجد حيّك</title>
+
+  <!-- Start these connections while Flutter's own files download: the
+       CanvasKit engine and the Arabic fonts come from Google's CDNs. -->
+  <link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script>
+    // The backend preconnect is skipped on this machine (local previews and
+    // the local-only demo build never talk to the backend).
+    window.mogtama3yIsLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+    if (!window.mogtama3yIsLocal) {
+      var pc = document.createElement('link');
+      pc.rel = 'preconnect'; pc.href = 'https://pxiabifybakbsqlycffc.supabase.co'; pc.crossOrigin = '';
+      document.head.appendChild(pc);
+    }
+  </script>
+
+  <!-- Instant splash: plain HTML painted on the first frame, so someone who
+       scans a shop's QR on mobile data sees something right away instead of
+       a blank page while the app (several MB) downloads. Removed when
+       Flutter draws its first frame. -->
+  <style>
+    html, body { margin: 0; height: 100%; background: #0B1530; }
+    #splash {
+      position: fixed; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 14px;
+      background: #0B1530; font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", system-ui, -apple-system, sans-serif;
+      color: #FFFFFF; transition: opacity .25s ease;
+    }
+    #splash img { width: 84px; height: 84px; border-radius: 22px; box-shadow: 0 6px 24px rgba(11,35,64,.15); }
+    #splash .name { font-size: 22px; font-weight: 800; }
+    #splash .msg { font-size: 14px; color: rgba(255,255,255,.65); }
+    #splash .bar { width: 140px; height: 4px; border-radius: 4px; background: rgba(255,255,255,.12); overflow: hidden; }
+    #splash .bar::after {
+      content: ""; display: block; width: 40%; height: 100%; border-radius: 4px; background: #F2B661;
+      animation: slide 1.1s ease-in-out infinite;
+    }
+    @keyframes slide { 0% { transform: translateX(260%); } 100% { transform: translateX(-120%); } }
+    #splash.off { display: none; }
+
+    /* Instant landing (HTML only) for first-time visitors — see the boot
+       script at the end of <body>. */
+    #landing { color: #fff; font-family: "Segoe UI", Tahoma, "Noto Sans Arabic", "Geeza Pro", system-ui, -apple-system, sans-serif; max-width: 640px; margin: 0 auto; padding: 0 16px 40px; }
+    #landing.off { display: none; }
+    #landing a { color: inherit; text-decoration: none; }
+    #landing .lp-btn.gold { color: #0B1530; }
+    .lp-top { display: flex; align-items: center; gap: 10px; padding: 14px 0; }
+    .lp-top img { width: 40px; height: 40px; border-radius: 11px; object-fit: cover; }
+    .lp-brand { font-weight: 800; font-size: 19px; }
+    .lp-brand small { display: block; font-weight: 500; font-size: 11.5px; color: rgba(255,255,255,.6); }
+    .lp-login { margin-inline-start: auto; border: 1px solid rgba(255,255,255,.22); border-radius: 999px; padding: 8px 14px; font-size: 13px; font-weight: 700; }
+    .lp-hero { position: relative; border-radius: 22px; overflow: hidden; background: #14244B; }
+    .lp-hero img { display: block; width: 100%; height: auto; aspect-ratio: 720 / 402; object-fit: cover; opacity: .55; }
+    .lp-hero.square img { aspect-ratio: 1 / 1; }
+    .lp-hero .lp-copy { position: absolute; inset: auto 0 0 0; padding: 18px; background: linear-gradient(transparent, rgba(11,21,48,.92) 45%); }
+    h1.lp-h1 { margin: 0 0 6px; font-size: 25px; line-height: 1.35; font-weight: 800; }
+    .lp-sub { margin: 0; color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.7; }
+    .lp-search { display: flex; gap: 8px; margin: 16px 0 6px; }
+    .lp-search input { flex: 1; min-width: 0; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.08); color: #fff; border-radius: 14px; padding: 13px 14px; font: inherit; font-size: 14px; }
+    .lp-search input::placeholder { color: rgba(255,255,255,.55); }
+    .lp-btn { display: block; text-align: center; border: 0; border-radius: 14px; padding: 14px 16px; font: inherit; font-weight: 800; font-size: 15px; cursor: pointer; }
+    .lp-btn.gold { background: #F2B661; color: #0B1530; }
+    .lp-btn.ghost { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); color: #fff; margin-top: 10px; }
+    .lp-quick { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 14px 0 4px; }
+    .lp-quick a { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; padding: 12px 4px; text-align: center; font-size: 12px; font-weight: 700; }
+    .lp-quick svg { display: block; width: 22px; height: 22px; margin: 0 auto 6px; fill: none; stroke: #F2B661; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    h2.lp-h2 { font-size: 18px; margin: 26px 0 12px; font-weight: 800; }
+    .lp-grid, .lp-list, .lp-foot, h2.lp-h2 { content-visibility: auto; contain-intrinsic-size: auto 400px; }
+    .lp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .lp-tile { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; overflow: hidden; }
+    .lp-tile img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; background: #14244B; }
+    .lp-tile span { display: block; padding: 8px 8px 2px; font-size: 13px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .lp-tile small { display: block; padding: 0 8px 9px; font-size: 11px; color: rgba(255,255,255,.6); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .lp-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .lp-list li { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 14px; }
+    .lp-list b { display: block; font-size: 15px; margin-bottom: 4px; color: #F2B661; }
+    .lp-list p, .lp-steps li { margin: 0; font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,.8); }
+    .lp-steps { margin: 0; padding-inline-start: 22px; display: grid; gap: 8px; }
+    .lp-yt { display: block; width: 100%; background: none; border: 0; color: #F2B661; font: inherit; font-size: 13px; font-weight: 700; padding: 8px 0 2px; cursor: pointer; text-align: center; }
+    .lp-vids { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; content-visibility: auto; contain-intrinsic-size: auto 420px; }
+    .lp-vid { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; overflow: hidden; padding: 0; color: #fff; font: inherit; cursor: pointer; text-align: start; }
+    .lp-vid img { display: block; width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; background: #14244B; }
+    .lp-vid span { display: block; padding: 7px 8px 9px; font-size: 12px; font-weight: 700; line-height: 1.5; }
+    #lp-modal { position: fixed; inset: 0; background: rgba(0,0,0,.88); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; z-index: 1000; padding: 12px; }
+    #lp-modal[hidden] { display: none; }
+    #lp-modal .box { width: min(92vw, calc((100vh - 90px) * 9 / 16)); aspect-ratio: 9 / 16; background: #000; border-radius: 14px; overflow: hidden; }
+    #lp-modal iframe { border: 0; width: 100%; height: 100%; display: block; }
+    #lp-modal .close { background: #F2B661; color: #0B1530; border: 0; border-radius: 999px; padding: 10px 22px; font: inherit; font-weight: 800; cursor: pointer; }
+    .lp-note { font-size: 12px; color: rgba(255,255,255,.55); line-height: 1.7; margin-top: 18px; }
+    .lp-foot { margin-top: 30px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.12); display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 12.5px; color: rgba(255,255,255,.7); }
+    .lp-foot a { text-decoration: underline; text-underline-offset: 3px; }
+    .lp-credit { width: 100%; color: rgba(255,255,255,.5); font-size: 11.5px; }
+  </style>
+  <link rel="manifest" href="manifest.json">
+  <script>
+    // "Add to home screen": Chrome/Android fires beforeinstallprompt; we keep
+    // it so the app can offer its own install button (iOS has no prompt —
+    // the app shows Share → Add to Home Screen instructions instead).
+    window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); window.__installEvt = e; });
+    window.mogtama3yCanInstall = function () { return !!window.__installEvt; };
+    window.mogtama3yInstall = function () {
+      var e = window.__installEvt; if (!e) return false;
+      e.prompt(); window.__installEvt = null; return true;
+    };
+    window.mogtama3yIsStandalone = function () {
+      return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+    };
+    window.mogtama3yIsIOS = function () { return /iphone|ipad|ipod/i.test(navigator.userAgent); };
+
+    // Phone notifications (Web Push): 'unsupported' | 'default' | 'granted' | 'denied'.
+    window.mogtama3yPushState = function () {
+      if (!('serviceWorker' in navigator) || !('PushManager' in window) || !('Notification' in window)) return 'unsupported';
+      return Notification.permission;
+    };
+    // Asks permission and subscribes this device; resolves to the
+    // subscription as JSON text, or '' when refused/unsupported.
+    window.mogtama3yEnablePush = async function (vapidPublicKey) {
+      try {
+        if (window.mogtama3yPushState() === 'unsupported') return '';
+        if (await Notification.requestPermission() !== 'granted') return '';
+        var reg = await navigator.serviceWorker.register('push-sw.js');
+        await navigator.serviceWorker.ready;
+        var raw = atob(vapidPublicKey.replace(/-/g, '+').replace(/_/g, '/') + '==='.slice((vapidPublicKey.length + 3) % 4));
+        var key = new Uint8Array(raw.length);
+        for (var i = 0; i < raw.length; i++) key[i] = raw.charCodeAt(i);
+        var sub = (await reg.pushManager.getSubscription()) ||
+          (await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: key }));
+        return JSON.stringify(sub.toJSON());
+      } catch (e) { return ''; }
+    };
+  </script>
+
+  <!-- Google Analytics (GA4). Queued now, its script fetched once the page
+       has loaded so it never competes with the first paint. -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LW5F70SQN3');
+    // Loaded at the visitor's first touch/scroll, or 7 s after load,
+    // whichever comes first — the queued events above are sent then.
+    (function () {
+      // No analytics from local previews / the local demo build.
+      if (window.mogtama3yIsLocal) return;
+      var done = false;
+      function loadGa() {
+        if (done) return;
+        done = true;
+        var s = document.createElement('script');
+        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-LW5F70SQN3';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'scroll', 'keydown'].forEach(function (ev) {
+        window.addEventListener(ev, loadGa, { once: true, passive: true });
+      });
+      window.addEventListener('load', function () { setTimeout(loadGa, 7000); });
+    })();
+  </script>
+</head>
+<body>
+  <!-- Instant landing: what a first-time visitor sees, in plain HTML (no
+       Flutter, no web fonts), so the first load is as fast as the directory
+       site. Every link is an app route (#/...): tapping one starts the app
+       right on that screen. Returning users (signed in, installed app, or a
+       deep link) skip this and go straight into the app. The مُجتمعي version
+       is here; tajer / ittihad swap in their own from the script below. -->
+  <main id="landing">
+    <header class="lp-top">
+      <img src="icons/Icon-192.png" alt="" width="40" height="40">
+      <div class="lp-brand">مُجتمعي<small>كل حيّك في تطبيق واحد</small></div>
+      <a class="lp-login" href="#/login">دخول</a>
+    </header>
+    <section class="lp-hero">
+      <img src="landing/hero.webp" alt="" width="720" height="402" fetchpriority="high">
+      <div class="lp-copy">
+        <h1 class="lp-h1">كل حيّك في تطبيق واحد</h1>
+        <p class="lp-sub">السوق، المحلات، الصيانة والجيران… أسهل وأذكى</p>
+      </div>
+    </section>
+    <form class="lp-search" id="lp-search" role="search">
+      <input name="q" type="search" placeholder="دوّر على صيدلية، سوبر ماركت، سبّاك…" aria-label="بحث في المحلات القريبة">
+      <button class="lp-btn gold" type="submit">بحث</button>
+    </form>
+    <nav class="lp-quick" aria-label="خدمات سريعة">
+      <a href="#/nearby"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>اكتشف حواليك</a>
+      <a href="#/reports"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 8a5 5 0 0 1 0 8"/></svg>بلاغات حيّك</a>
+      <a href="#/my-address"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>عنوانك الإلكتروني</a>
+      <a href="#/neighborhoods"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.5A5 5 0 0 1 21 19"/></svg>جروب الحي</a>
+    </nav>
+    <h2 class="lp-h2">أقسام الحي والخدمات</h2>
+    <div class="lp-grid">
+      <a class="lp-tile" href="#/marketplace"><img src="landing/used_market.webp" alt="" width="240" height="240" loading="lazy"><span>سوق المستعمل</span><small>سلع من الجيران</small></a>
+      <a class="lp-tile" href="#/shops"><img src="landing/shops.webp" alt="" width="240" height="240" loading="lazy"><span>المحلات</span><small>محلات ومتاجر الحي</small></a>
+      <a class="lp-tile" href="#/real-estate"><img src="landing/real_estate.webp" alt="" width="240" height="240" loading="lazy"><span>عقارات</span><small>بيع وإيجار بالمنطقة</small></a>
+      <a class="lp-tile" href="#/jobs"><img src="landing/jobs.webp" alt="" width="240" height="240" loading="lazy"><span>وظائف</span><small>شواغر قريبة منك</small></a>
+      <a class="lp-tile" href="#/technicians"><img src="landing/maintenance.webp" alt="" width="240" height="240" loading="lazy"><span>الصيانة والخدمات</span><small>فنيين وحجز بضمان</small></a>
+      <a class="lp-tile" href="#/recycling"><img src="landing/recycling.webp" alt="" width="240" height="240" loading="lazy"><span>تدوير وتوفير</span><small>مزادات الخردة والتدوير</small></a>
+      <a class="lp-tile" href="#/cars"><img src="landing/cars.webp" alt="" width="240" height="240" loading="lazy"><span>سيارات</span><small>بيع وإيجار وقطع غيار</small></a>
+      <a class="lp-tile" href="#/tutoring"><img src="landing/tutoring.webp" alt="" width="240" height="240" loading="lazy"><span>دروس خصوصية</span><small>مدرسين لكل المواد</small></a>
+      <a class="lp-tile" href="#/halls"><img src="landing/halls.webp" alt="" width="240" height="240" loading="lazy"><span>قاعات المناسبات</span><small>أفراح وخطوبة وحفلات</small></a>
+      <a class="lp-tile" href="#/pets"><img src="landing/pets.webp" alt="" width="240" height="240" loading="lazy"><span>الحيوانات الأليفة</span><small>بيع وتبني ومفقودات</small></a>
+      <a class="lp-tile" href="#/kids"><img src="landing/kids.webp" alt="" width="240" height="240" loading="lazy"><span>مستلزمات الأطفال</span><small>جديد ومستعمل وببلاش</small></a>
+      <a class="lp-tile" href="#/masjid"><img src="masjid_icons/Icon-192.png" alt="" width="240" height="240" loading="lazy"><span>المساجد</span><small>مواقيت الصلاة ومساجد حيّك</small></a>
+    </div>
+    <a class="lp-btn gold" href="#/login" style="margin-top:22px">سجّل دخول أو اعمل حساب</a>
+    <footer class="lp-foot">
+      <a href="#/about">عن مُجتمعي</a>
+      <a href="#/support">الدعم</a>
+      <a href="/tajer/">متجري للتجار</a>
+      <a href="/ittihad/">اتحاد الملاك</a>
+      <a href="/masjid/">مسجدي</a>
+      <a href="/balagh/">بلّغ عن مشكلة</a>
+      <a href="/dalil/">دليل المحلات</a>
+      <a href="/terms/">الشروط</a>
+      <a href="/privacy/">الخصوصية</a>
+      <span class="lp-credit">تصميم وتنفيذ <a href="https://getapex.tech" rel="noopener">Get Apex</a></span>
+    </footer>
+  </main>
+
+  <div id="splash" class="off" role="status" aria-live="polite">
+    <img src="icons/Icon-192.png" alt="">
+    <div class="name">مسجدي</div>
+    <div class="msg" id="splash-msg">جارٍ التحميل…</div>
+    <div class="bar"></div>
+  </div>
+  <script>
+    (function () {
+      var host = location.hostname;
+      var flavor = /^tajer\./.test(host) ? 'tajer' : (/^ittihad\./.test(host) ? 'ittihad' : (/^masjid\./.test(host) ? 'masjid' : 'mogtama3y'));
+      var forced = /[?&]flavor=(tajer|ittihad|masjid|mogtama3y)/.exec(location.search);
+      if (forced) flavor = forced[1];
+      var landing = document.getElementById('landing');
+      var splash = document.getElementById('splash');
+
+      // Straight into the app: a deep link (#/s/…, #/o/…, #/r/…), the Google
+      // sign-in callback, the installed app, or someone already signed in.
+      function wantsApp() {
+        var h = location.hash || '';
+        if (h && h !== '#' && h !== '#/') return true;
+        if (/[?&](code|error|error_description)=/.test(location.search)) return true;
+        // «الصفحة الرئيسية» from inside the app (?home=1): show this page even
+        // to a signed-in user / installed app / demo role.
+        if (/[?&]home=1(&|$)/.test(location.search)) return false;
+        // Local demo build links (http://localhost:8737/?role=…) open the app.
+        if (window.mogtama3yIsLocal && /[?&]role=/.test(location.search)) return true;
+        if (window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true) return true;
+        try {
+          // supabase_flutter keeps the session under
+          // 'flutter.sb-<project>-auth-token' (SharedPreferences on web).
+          for (var i = 0; i < localStorage.length; i++) {
+            if (/sb-.+-auth-token/.test(localStorage.key(i) || '')) return true;
+          }
+        } catch (e) {}
+        return false;
+      }
+
+      var booted = false;
+      function boot() {
+        if (booted) return;
+        booted = true;
+        var hash = location.hash || '';
+        var msg = document.getElementById('splash-msg');
+        if (hash.indexOf('#/s/') === 0) msg.textContent = 'بنفتحلك المتجر…';
+        else if (hash.indexOf('#/merchant') === 0) msg.textContent = 'بنفتحلك لوحة التاجر…';
+        splash.classList.remove('off');
+        landing.classList.add('off');
+        window.scrollTo(0, 0);
+        var s = document.createElement('script');
+        s.src = 'flutter_bootstrap.js';
+        s.async = true;
+        document.body.appendChild(s);
+      }
+      window.addEventListener('flutter-first-frame', function () {
+        splash.style.opacity = '0';
+        setTimeout(function () { splash.remove(); landing.remove(); }, 300);
+      });
+
+      var pages = {
+        tajer:
+          '<header class="lp-top"><img src="landing/shops.webp" alt="" width="40" height="40">' +
+          '<div class="lp-brand">متجري<small>من مُجتمعي</small></div><a class="lp-login" href="#/login">دخول</a></header>' +
+          '<section class="lp-hero square"><img src="landing/shops-big.webp" alt="" width="600" height="600" fetchpriority="high">' +
+          '<div class="lp-copy"><h1 class="lp-h1">محلك أونلاين ببلاش</h1>' +
+          '<p class="lp-sub">متجر باسم محلك، ومنتجاتك بالصور والأسعار، والطلبات توصلك على لوحة محلك، والزبون يقدر يبعتهالك واتساب — في دقيقتين ومن غير عمولة.</p></div></section>' +
+          '<a class="lp-btn gold" href="#/login" style="margin-top:16px">سجّل محلك دلوقتي</a>' +
+          '<a class="lp-btn ghost" href="#/login">عندي حساب — تسجيل الدخول</a>' +
+          '<h2 class="lp-h2">هتاخد إيه؟</h2><ul class="lp-list">' +
+          '<li><b>لينك وQR باسم محلك</b><p>تعلّقه على المحل وتبعته لزباينك، يفتح متجرك في ثانية.</p></li>' +
+          '<li><b>منتجاتك بالصور والأسعار</b><p>صوّر المنتج من الموبايل وحط سعره، وخبّيه لما يخلص.</p></li>' +
+          '<li><b>الطلبات في لوحة محلك</b><p>الطلب يوصلك إشعار في لوحة محلك، والزبون يقدر يبعتلك تفاصيله على واتساب كمان.</p></li>' +
+          '<li><b>عنوان الزبون للتوصيل</b><p>اكتب اسم عنوان الزبون الإلكتروني فيفتحلك العنوان بالخريطة.</p></li>' +
+          '<li><b>ببلاش بالكامل</b><p>من غير عمولة ولا اشتراك، والفلوس بينك وبين زبونك مباشرة.</p></li></ul>' +
+          '<h2 class="lp-h2">إزاي تبدأ؟</h2><ol class="lp-steps">' +
+          '<li>اعمل حساب بإيميلك أو بحساب جوجل.</li><li>سجّل اسم محلك ونشاطك ورقم الواتساب، وخد اللينك والـ QR.</li>' +
+          '<li>ضيف منتجاتك وعلّق الـ QR على المحل — وابدأ استقبل طلبات.</li></ol>' +
+          '<a class="lp-btn gold" href="#/login" style="margin-top:20px">ابدأ دلوقتي ببلاش</a>',
+        ittihad:
+          '<header class="lp-top"><img src="icons/Icon-192.png" alt="" width="40" height="40">' +
+          '<div class="lp-brand">اتحاد الملاك<small>اتحاد ملاك أونلاين</small></div><a class="lp-login" href="#/login">دخول</a></header>' +
+          '<section class="lp-hero square"><img src="landing/union-big.webp" alt="" width="600" height="600" fetchpriority="high">' +
+          '<div class="lp-copy"><h1 class="lp-h1">اتحاد ملاك عمارتك… من الموبايل</h1>' +
+          '<p class="lp-sub">المستحقات والقرارات والانتخابات والتقارير المالية وتصاريح الزوار في مكان واحد، ببلاش.</p></div></section>' +
+          '<a class="lp-btn gold" href="#/login" style="margin-top:16px">افتح لوحة اتحاد عمارتك</a>' +
+          '<h2 class="lp-h2">إزاي تبدأ؟</h2><ol class="lp-steps">' +
+          '<li>رئيس الاتحاد (أو أي مالك) يسجّل العمارة ويبقى مؤسسها.</li><li>ياخد كود دعوة ويبعته في جروب العمارة.</li>' +
+          '<li>السكان ينضموا بالكود، والرئيس يوافق على كل شقة.</li></ol>' +
+          '<a class="lp-btn gold" href="#/login" style="margin-top:16px">أسّس اتحاد عمارتك</a>' +
+          '<button class="lp-yt" type="button" data-yt="TGZwLWd4bOQ">▶ شوف الشرح (30 ثانية)</button>' +
+          '<a class="lp-btn ghost" href="#/login">عندي كود دعوة من الرئيس</a>' +
+          '<button class="lp-yt" type="button" data-yt="mo00sgy4QhQ">▶ شوف الشرح (30 ثانية)</button>' +
+          '<a class="lp-btn ghost" href="#/login">أنا مستأجر ومعايا كود من المالك</a>' +
+          '<button class="lp-yt" type="button" data-yt="Xr52M5jteLo">▶ شوف الشرح (30 ثانية)</button>' +
+          '<h2 class="lp-h2">هتقدر تعمل إيه</h2><ul class="lp-list">' +
+          '<li><b>مستحقات الصيانة</b><p>إصدار المستحقات لكل الشقق مرة واحدة، والسكان يدفعوا من محفظتهم، وكله متسجّل.</p></li>' +
+          '<li><b>قرارات وانتخابات</b><p>تصويت مجلس الإدارة على القرارات، وانتخابات الرئاسة بصوت لكل شقة ونصاب واضح.</p></li>' +
+          '<li><b>تقارير مالية</b><p>المصروفات والإيرادات ظاهرة لكل السكان الموثقين — شفافية من غير خناقات.</p></li>' +
+          '<li><b>سكان موثقين</b><p>محدش يدخل العمارة إلا بموافقة الرئيس، والمالك يضيف مستأجره بكود خاص.</p></li>' +
+          '<li><b>تصاريح زوار وحارس</b><p>تصريح QR للزائر بمدة محددة، والحارس يتحقق منه من موبايله.</p></li>' +
+          '<li><b>إعلانات ودردشة وSOS</b><p>إعلانات رسمية من المجلس، دردشة للعمارة، وزر استغاثة ينبّه الجيران.</p></li></ul>' +
+          '<h2 class="lp-h2">فيديوهات الشرح</h2><div class="lp-vids">' +
+          '<button class="lp-vid" type="button" data-yt="TGZwLWd4bOQ"><img src="https://i.ytimg.com/vi/TGZwLWd4bOQ/hqdefault.jpg" alt="" width="240" height="427" loading="lazy"><span>أسّس اتحاد عمارتك</span></button>' +
+          '<button class="lp-vid" type="button" data-yt="mo00sgy4QhQ"><img src="https://i.ytimg.com/vi/mo00sgy4QhQ/hqdefault.jpg" alt="" width="240" height="427" loading="lazy"><span>انضم لعمارتك بكود الدعوة</span></button>' +
+          '<button class="lp-vid" type="button" data-yt="Xr52M5jteLo"><img src="https://i.ytimg.com/vi/Xr52M5jteLo/hqdefault.jpg" alt="" width="240" height="427" loading="lazy"><span>ضيف المستأجر بتاعك</span></button>' +
+          '<button class="lp-vid" type="button" data-yt="6u4XvP3PVnc"><img src="https://i.ytimg.com/vi/6u4XvP3PVnc/hqdefault.jpg" alt="" width="240" height="427" loading="lazy"><span>انتخبوا رئيس الاتحاد</span></button>' +
+          '<button class="lp-vid" type="button" data-yt="X4dmxRNUb2M"><img src="https://i.ytimg.com/vi/X4dmxRNUb2M/hqdefault.jpg" alt="" width="240" height="427" loading="lazy"><span>تصريح دخول للزائر</span></button>' +
+          '<button class="lp-vid" type="button" data-yt="-SAabWeeJuo"><img src="https://i.ytimg.com/vi/-SAabWeeJuo/hqdefault.jpg" alt="" width="240" height="427" loading="lazy"><span>زرار الطوارئ SOS</span></button>' +
+          '</div>' +
+          '<p class="lp-note">الأدوات دي بتساعدكم تنظموا شغل الاتحاد، ومش بديل عن القواعد القانونية لاتحادكم.</p>',
+        masjid:
+          '<header class="lp-top"><img src="icons/Icon-192.png" alt="" width="40" height="40">' +
+          '<div class="lp-brand">مسجدي<small>كل مساجد حيّك</small></div><a class="lp-login" href="#/login">دخول</a></header>' +
+          '<section class="lp-hero square"><img src="icons/Icon-512.png" alt="" width="600" height="600" fetchpriority="high">' +
+          '<div class="lp-copy"><h1 class="lp-h1">مسجدي — كل مساجد حيّك</h1>' +
+          '<p class="lp-sub">مواقيت الصلاة بالدقيقة لمكانك، وأقرب مسجد ليك، ومواعيد الإقامة وخطبة الجمعة والدروس وحلقات القرآن — ببلاش.</p></div></section>' +
+          '<a class="lp-btn gold" href="#/masjid" style="margin-top:16px">مواقيت الصلاة وأقرب مسجد</a>' +
+          '<a class="lp-btn ghost" href="#/login">إمام أو خطيب أو أمين مسجد؟ سجّل مسجدك</a>' +
+          '<h2 class="lp-h2">هتلاقي إيه؟</h2><ul class="lp-list">' +
+          '<li><b>مواقيت الصلاة</b><p>بحساب الهيئة المصرية العامة للمساحة وبتوقيت مصر، مع عدّاد للصلاة الجاية — من غير نت تقريباً.</p></li>' +
+          '<li><b>صفحة لكل مسجد</b><p>مواعيد الإقامة، خطبة الجمعة والخطيب، الإعلانات وصلاة الجنازة، والدروس وحلقات التحفيظ للرجال والسيدات والأطفال.</p></li>' +
+          '<li><b>تابع مسجدك</b><p>إعلانات المسجد والدروس الجديدة وصلاة الجنازة توصلك إشعار على موبايلك.</p></li>' +
+          '<li><b>احتياجات المسجد</b><p>مروحة، سجاد، صيانة… كل احتياج بمبلغه، وسجّل «هساهم بكذا»، والمسجد بيأكد اللي وصله قدام الكل.</p></li>' +
+          '<li><b>كفالة الأيتام ومسابقات القرآن</b><p>برامج كفالة من غير أي بيانات عن الأطفال، ومسابقات حفظ بالتسجيل والنتايج.</p></li></ul>' +
+          '<h2 class="lp-h2">لإدارة المسجد</h2><ol class="lp-steps">' +
+          '<li>اعمل حساب وافتح صفحة مسجدك (أو ضيفه لو مش موجود).</li><li>اضغط «أنا مسؤول عن المسجد ده» واختار صفتك: إمام، خطيب، أمين المسجد أو عضو مجلس إدارة.</li>' +
+          '<li>بعد المراجعة، انشر المواعيد والإعلانات والاحتياجات وضيف مساعدين.</li></ol>' +
+          '<a class="lp-btn gold" href="#/login" style="margin-top:16px">ابدأ دلوقتي ببلاش</a>' +
+          '<p class="lp-note">التطبيق مابيستلمش فلوس: التبرعات والكفالات بتتدفع للمسجد مباشرة، والتطبيق بينظم التعهدات بس.</p>'
+      };
+      function playVideo(id) {
+        var m = document.getElementById('lp-modal');
+        if (!m) {
+          m = document.createElement('div');
+          m.id = 'lp-modal';
+          m.innerHTML = '<div class="box"></div><button class="close" type="button">قفل ✕</button>';
+          m.addEventListener('click', function (e) { if (e.target === m || e.target.className === 'close') closeVideo(); });
+          document.body.appendChild(m);
+        }
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(id) + '?rel=0&playsinline=1&modestbranding=1&autoplay=1';
+        f.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture; fullscreen');
+        f.setAttribute('allowfullscreen', '');
+        f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+        f.title = 'فيديو الشرح';
+        var box = m.querySelector('.box');
+        box.innerHTML = '';
+        box.appendChild(f);
+        m.hidden = false;
+      }
+      function closeVideo() {
+        var m = document.getElementById('lp-modal');
+        if (!m) return;
+        m.querySelector('.box').innerHTML = ''; // removing the iframe stops playback
+        m.hidden = true;
+      }
+      landing.addEventListener('click', function (e) {
+        var b = e.target.closest && e.target.closest('[data-yt]');
+        if (!b) return;
+        e.preventDefault();
+        playVideo(b.getAttribute('data-yt'));
+      });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeVideo(); });
+
+      if (pages[flavor]) {
+        var foot = landing.querySelector('.lp-foot');
+        landing.innerHTML = pages[flavor];
+        landing.appendChild(foot);
+      }
+
+      // Opened with ?home=1 by someone already signed in (or a demo role):
+      // the start buttons lead back into the app instead of to sign-in.
+      if (/[?&]home=1(&|$)/.test(location.search)) {
+        var inApp = window.mogtama3yIsLocal && /[?&]role=/.test(location.search);
+        try {
+          for (var k = 0; k < localStorage.length; k++) {
+            if (/sb-.+-auth-token/.test(localStorage.key(k) || '')) inApp = true;
+          }
+        } catch (e) {}
+        if (inApp) {
+          var back = flavor === 'ittihad' ? '#/union' : (flavor === 'tajer' ? '#/merchant' : (flavor === 'masjid' ? '#/masjid' : '#/home'));
+          landing.querySelectorAll('a[href="#/login"]').forEach(function (a) { a.setAttribute('href', back); });
+          var top = landing.querySelector('.lp-login');
+          if (top) top.textContent = 'لوحتي';
+        }
+      }
+
+      if (wantsApp()) {
+        boot();
+      } else {
+        window.addEventListener('hashchange', boot);
+        var form = document.getElementById('lp-search');
+        if (form) form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var q = (form.q.value || '').trim();
+          location.hash = q ? '#/nearby?q=' + encodeURIComponent(q) : '#/nearby';
+        });
+        // Start fetching the app at the visitor's first touch or scroll, so a
+        // tap opens it fast — but nothing heavy downloads for someone (or a
+        // speed test) that only looks.
+        var warmed = false;
+        function warm() {
+          if (warmed) return;
+          warmed = true;
+          ['flutter_bootstrap.js', 'main.dart.js'].forEach(function (f) {
+            var l = document.createElement('link');
+            l.rel = 'prefetch'; l.href = f;
+            document.head.appendChild(l);
+          });
+        }
+        ['pointerdown', 'scroll', 'keydown'].forEach(function (ev) {
+          window.addEventListener(ev, warm, { once: true, passive: true });
+        });
+      }
+    })();
+  </script>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
+
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <!-- Instant store page for /#/s/<slug> links while Flutter loads. -->
+  <script src="phone-verify.js" defer></script>
+  <!-- Guard console: scan a visitor pass QR with the camera. -->
+  <script src="qr-scan.js" defer></script>
+  <!-- متجري: download / print the shop's A5 QR card. -->
+  <script src="print-card.js" defer></script>
+  <!-- flutter_bootstrap.js is added by the boot script above, only when
+       the app is actually opened. -->
+</body>
+</html>
