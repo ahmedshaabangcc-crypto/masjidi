@@ -122442,7 +122442,7 @@ case 1:return A.m(p.at(-1),r)}})
 return A.o($async$Ah,r)},
 zN(){var s=0,r=A.p(t.H),q,p=this,o,n,m
 var $async$zN=A.l(function(a,b){if(a===1)return A.m(b,r)
-for(;;)switch(s){case 0:n="https://masjid.mogtama3y.com/#/masjid/"+p.a.c
+for(;;)switch(s){case 0:n="https://masjidi.mogtama3y.com/#/masjid/"+p.a.c
 m=p.d
 m=A.f(m==null?null:m.h(0,"name"))
 s=3
