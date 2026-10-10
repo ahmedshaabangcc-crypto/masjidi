@@ -124360,7 +124360,7 @@ if(!B.b.m(B.Cv,b))a6.d=60
 a=A.Z(a7?null:b0.h(0,"mode"))
 a6.e=a==null?"audio":a
 a0=A.Z(a7?null:b0.h(0,"visibility"))
-a6.f=a0==null?"members":a0
+a6.f=a0==null?"public":a0
 a1=A.Z(a7?null:b0.h(0,"audience"))
 a6.r=a1==null?"all":a1
 a8=m.c
