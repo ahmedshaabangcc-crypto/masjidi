@@ -16,15 +16,15 @@ o=A.f9(C.c.Y(r,0,q),null)
 n=A.f9(C.c.Y(r,q+1,p),null)
 if(o==null||n==null||o<1||o>114||n<1||n>m[o-1].length)continue
 m[o-1][n-1]=C.c.bU(r,p+1)}x=v.a
-return new B.nt(m,C.c.FD(x.charCodeAt(0)==0?x:x))},
-Io(d,e,f){var x,w,v
-if(d===1||d===9||e!==1)return new A.Hm(null,f)
+return new B.ns(m,C.c.FD(x.charCodeAt(0)==0?x:x))},
+Ip(d,e,f){var x,w,v
+if(d===1||d===9||e!==1)return new A.Hn(null,f)
 x=A.a(f.split(" "),y.x)
 if(x.length>4){w=y.w
 v=A.fb(x,0,A.i0(4,"count",y.C),w).aK(0," ")
-if(B.bsA(v)===$.bMU())return new A.Hm(v,A.fb(x,4,null,w).aK(0," "))}return new A.Hm(null,f)},
+if(B.bsA(v)===$.bMU())return new A.Hn(v,A.fb(x,4,null,w).aK(0," "))}return new A.Hn(null,f)},
 bsA(d){var x,w,v,u=new A.d7("")
-for(x=new A.EF(d);x.u();){w=x.d
+for(x=new A.EG(d);x.u();){w=x.d
 v=!0
 if(!(w>=1611&&w<=1631))if(w!==1648)v=w>=1750&&w<=1773||w===1600
 if(v)continue
@@ -46,14 +46,14 @@ for(v=1;v<=114;++v)w.push(v)
 u=r.a
 if(u.length===0)return w
 t=A.f9(u,null)
-if(t!=null)return t>=1&&t<=114?A.a([t],x):C.tV
+if(t!=null)return t>=1&&t<=114?A.a([t],x):C.tW
 x=r.a
 u=A.aP("[\\s'\\-]",!0,!1)
 s=y.a
 x=A.a2(new A.aE(w,new B.btn(r,A.bS(x,u,"")),s),s.i("M.E"))
 return x},
-c1D(d){return A.Bd(d,A.aP("[\u0660-\u0669]",!0,!1),new B.br3(),null)},
-nt:function nt(d,e){this.a=d
+c1D(d){return A.Be(d,A.aP("[\u0660-\u0669]",!0,!1),new B.br3(),null)},
+ns:function ns(d,e){this.a=d
 this.b=e},
 aJy:function aJy(){},
 btn:function btn(d,e){this.a=d
@@ -70,15 +70,15 @@ B=a.updateHolder(c[13],B)
 E=c[37]
 F=c[14]
 D=c[28]
-B.nt.prototype={
+B.ns.prototype={
 vd(d,e){return this.a[d-1][e-1]}}
-var z=a.updateTypes(["ab<nt>()"])
+var z=a.updateTypes(["ab<ns>()"])
 B.aJy.prototype={
 $0(){var x=0,w=A.n(y.u),v,u=2,t=[],s,r,q,p,o
 var $async$$0=A.j(function(d,e){if(d===1){t.push(e)
 x=u}for(;;)switch(x){case 0:u=4
 x=7
-return A.d($.wA().hK("assets/quran/quran-uthmani.txt.gz"),$async$$0)
+return A.d($.wB().hK("assets/quran/quran-uthmani.txt.gz"),$async$$0)
 case 7:s=e
 x=8
 return A.d(F.aqa(J.eT(J.bAi(s),s.byteOffset,s.byteLength)),$async$$0)
@@ -119,7 +119,7 @@ $0(){var x=0,w=A.n(y.e),v,u=2,t=[],s,r,q,p
 var $async$$0=A.j(function(d,e){if(d===1){t.push(e)
 x=u}for(;;)switch(x){case 0:u=4
 r=new A.a2d("AmiriQuranMT",A.a([],y.p))
-r.ac7($.wA().hK("assets/quran/AmiriQuran-Regular.ttf"))
+r.ac7($.wB().hK("assets/quran/AmiriQuran-Regular.ttf"))
 s=r
 x=7
 return A.d(s.tn(),$async$$0)
@@ -143,13 +143,13 @@ case 6:case 1:return A.l(v,w)
 case 2:return A.k(t.at(-1),w)}})
 return A.m($async$$0,w)},
 $S:192};(function inheritance(){var x=a.inherit,w=a.inheritMany
-x(B.nt,A.N)
+x(B.ns,A.N)
 w(A.ke,[B.aJy,B.aJu])
 w(A.hK,[B.btn,B.br3])})()
-var y={p:A.a1("y<ab<jX>>"),x:A.a1("y<h>"),r:A.a1("y<v>"),B:A.a1("R<h>"),u:A.a1("nt"),w:A.a1("h"),a:A.a1("aE<v>"),e:A.a1("A"),C:A.a1("v")};(function constants(){E.qA=new A.H(0.25882352941176473,0,0,0,C.k)
-E.zA=new A.a_(12,10,12,10)
-E.w5=new A.f_(" ",null,null,C.bd,null,null,null,null,null,null,null)})();(function staticFields(){$.bwz=null
+var y={p:A.a1("y<ab<jX>>"),x:A.a1("y<h>"),r:A.a1("y<v>"),B:A.a1("R<h>"),u:A.a1("ns"),w:A.a1("h"),a:A.a1("aE<v>"),e:A.a1("A"),C:A.a1("v")};(function constants(){E.qB=new A.H(0.25882352941176473,0,0,0,C.k)
+E.zC=new A.Z(12,10,12,10)
+E.w6=new A.f_(" ",null,null,C.bd,null,null,null,null,null,null,null)})();(function staticFields(){$.bwz=null
 $.bEi=null
 $.bEj=!1})();(function lazyInitializers(){var x=a.lazyFinal
 x($,"cau","bMU",()=>B.bsA("\u0628\u0650\u0633\u0652\u0645\u0650 \u0671\u0644\u0644\u0651\u064e\u0647\u0650 \u0671\u0644\u0631\u0651\u064e\u062d\u0652\u0645\u064e\u0640\u0670\u0646\u0650 \u0671\u0644\u0631\u0651\u064e\u062d\u0650\u064a\u0645\u0650"))})()};
-(a=>{a["cH06MHllNshIuNYLSwOAQQ/8y2c="]=a.current})($__dart_deferred_initializers__);
+(a=>{a["BuaoAVontpa8TPm/n/O2bxnqQXo="]=a.current})($__dart_deferred_initializers__);
