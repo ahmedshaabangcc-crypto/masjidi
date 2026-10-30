@@ -96,8 +96,8 @@ if(u==null)u=""
 x=B.aP("\\s+",!0,!1)
 w=C.c.ap(B.bS(u,x," "))
 v=A.c4G(w)
-u=B.bK(d.h(0,"id"))
-u=u==null?null:C.d.bT(u)
+u=B.bD(d.h(0,"id"))
+u=u==null?null:C.d.bO(u)
 if(u==null)u=0
 x=B.W(d.h(0,"server"))
 return new A.ni(u,w,v.a,v.b,A.byO(x==null?"":x),A.c4I(d.h(0,"surah_list")),v.c)},
@@ -109,8 +109,8 @@ v=y.z
 while(s.u()){u=s.gL()
 if(x.b(u))t.push(A.bDE(B.e9(u,w,v)))}C.b.dE(t,new A.aL9())
 C.b.eF(t,new A.aLa())
-s=B.bK(d.h(0,"id"))
-s=s==null?null:C.d.bT(s)
+s=B.bD(d.h(0,"id"))
+s=s==null?null:C.d.bO(s)
 if(s==null)s=0
 x=B.W(d.h(0,"name"))
 return new A.jQ(s,C.c.ap(x==null?"":x),t)},
@@ -126,7 +126,7 @@ else t=C.b.dR(x,new A.bsW(u))?D.v4:D.v5
 if(C.c.bz(w,"\u0627\u0644\u0645\u0635\u062d\u0641"))w="\u062d\u0641\u0635 \u0639\u0646 \u0639\u0627\u0635\u0645"
 p=B.a([],y.s)
 for(s=v.length,r=0;r<v.length;v.length===s||(0,B.B)(v),++r){q=v[r]
-if(q!=="\u0645\u0631\u062a\u0644"&&!C.c.bz(q,"\u0627\u0644\u0645\u0635\u062d\u0641"))p.push(q)}return new B.bJ(w,t,p.length===0?null:C.b.aK(p," - "))},
+if(q!=="\u0645\u0631\u062a\u0644"&&!C.c.bz(q,"\u0627\u0644\u0645\u0635\u062d\u0641"))p.push(q)}return new B.bK(w,t,p.length===0?null:C.b.aK(p," - "))},
 c4I(d){var x,w,v,u,t,s,r,q,p,o,n,m=null
 if(y._.b(d))x=d
 else x=B.a(B.f(d==null?"":d).split(","),y.s)
@@ -144,7 +144,7 @@ o=B.eu(r,m,m)
 n=p<1?1:p
 r=o>114
 for(;;){if(!(n<=(r?114:o)))break
-w.D(0,n);++n}continue}n=typeof u=="number"?C.d.bT(u):B.f9(t,m)
+w.D(0,n);++n}continue}n=typeof u=="number"?C.d.bO(u):B.f9(t,m)
 if(n!=null&&n>=1&&n<=114)w.D(0,n)}v=B.a2(w,w.$ti.c)
 C.b.l6(v)
 return v},
@@ -376,17 +376,17 @@ $.bwg=x
 B.i4("listen.last",C.a_.hp(x,null))},
 bDg(){var x,w,v,u,t,s,r,q,p,o,n=null,m=$.bwg
 if(m==null)return n
-try{x=C.d.bT(B.dl(m.h(0,"r")))
-w=C.d.bT(B.dl(m.h(0,"m")))
+try{x=C.d.bO(B.dl(m.h(0,"r")))
+w=C.d.bO(B.dl(m.h(0,"m")))
 v=A.bSZ(x)
 r=v
 q=r==null?n:r.aYb(w)
 u=q==null?A.bDE(B.K(["id",w,"name",m.h(0,"mn"),"server",m.h(0,"sv"),"surah_list",m.h(0,"sl")],y.N,y.z)):q
 p=v
 t=p==null?new A.jQ(x,B.f(m.h(0,"rn")),B.a([u],y.Q)):p
-s=C.d.bT(B.dl(m.h(0,"s")))
+s=C.d.bO(B.dl(m.h(0,"s")))
 if(!A.apW(u.f,s)||u.e.length===0)return n
-r=B.bK(m.h(0,"p"))
+r=B.bD(m.h(0,"p"))
 if(r==null)r=n
 if(r==null)r=0
 return new B.aB([t,u,s,r])}catch(o){return n}},
@@ -1230,7 +1230,7 @@ x=21
 return B.d(B.i3("listen.prefs"),$async$$0)
 case 21:q=e
 if(q!=null){p=y.f.a(C.a_.eS(q,null))
-m=B.bK(J.b5(p,"speed"))
+m=B.bD(J.b5(p,"speed"))
 o=m==null?null:m
 if(o!=null&&C.b.m(D.FU,o))$.Me=o
 $.Dg=C.b.oo(D.Dh,new A.aCS(p),new A.aCT())}v=1
@@ -1247,7 +1247,7 @@ case 1:return B.k(u.at(-1),w)}})
 return B.m($async$$0,w)},
 $S:102}
 A.aCQ.prototype={
-$1(d){return C.d.bT(B.dl(d))},
+$1(d){return C.d.bO(B.dl(d))},
 $S:174}
 A.aCR.prototype={
 $2(d,e){var x=B.f(d)
@@ -1465,7 +1465,7 @@ if(r.d==null)m.push(o.aDz())
 x=o.d
 w=x.a.a.length===0?q:B.cJ(q,q,q,q,C.Bm,q,q,new A.b6n(o),q,q,q,q,q)
 v=C.i.bJ(0.07)
-m.push(B.bG(q,C.J,!1,q,!0,C.l,q,B.bL(),x,q,q,q,q,q,2,B.fB(q,new B.ea(4,B.ac(14),C.v),q,C.zI,q,q,q,q,!0,q,q,q,q,q,q,v,!0,q,q,q,q,q,q,q,q,q,q,q,q,q,C.p9,"\u062f\u0648\u0651\u0631 \u0639\u0644\u0649 \u0642\u0627\u0631\u0626\u2026 (\u0627\u0644\u062d\u0635\u0631\u064a\u060c \u0627\u0644\u0645\u0646\u0634\u0627\u0648\u064a\u060c \u0627\u0644\u0639\u0641\u0627\u0633\u064a)",q,q,q,q,q,q,q,q,q,!0,!0,!1,q,C.n4,q,q,q,q,q,q,w,q,q,q,q,q),C.t,!0,q,!0,q,!1,q,C.L,q,q,q,q,q,q,q,q,q,1,q,q,!1,"\u2022",q,new A.b6o(o),q,q,q,!1,q,q,!1,q,!0,q,C.H,q,q,q,q,q,q,q,q,q,q,q,C.cP,!0,C.y,q,C.Q,q,q,q,q))
+m.push(B.bH(q,C.J,!1,q,!0,C.l,q,B.bL(),x,q,q,q,q,q,2,B.fB(q,new B.ea(4,B.ac(14),C.v),q,C.zI,q,q,q,q,!0,q,q,q,q,q,q,v,!0,q,q,q,q,q,q,q,q,q,q,q,q,q,C.p9,"\u062f\u0648\u0651\u0631 \u0639\u0644\u0649 \u0642\u0627\u0631\u0626\u2026 (\u0627\u0644\u062d\u0635\u0631\u064a\u060c \u0627\u0644\u0645\u0646\u0634\u0627\u0648\u064a\u060c \u0627\u0644\u0639\u0641\u0627\u0633\u064a)",q,q,q,q,q,q,q,q,q,!0,!0,!1,q,C.n4,q,q,q,q,q,q,w,q,q,q,q,q),C.t,!0,q,!0,q,!1,q,C.L,q,q,q,q,q,q,q,q,q,1,q,q,!1,"\u2022",q,new A.b6o(o),q,q,q,!1,q,q,!1,q,!0,q,C.H,q,q,q,q,q,q,q,q,q,q,q,C.cP,!0,C.y,q,C.Q,q,q,q,q))
 m.push(C.S)
 w=B.a([o.a2U("\u0627\u0644\u0645\u0641\u0636\u0644\u064a\u0646",o.y,new A.b6p(o),D.tG)],n)
 for(u=0;u<3;++u){t=D.aqD[u]
@@ -1754,7 +1754,7 @@ for(j=0;j<4;++j){i=D.Dh[j]
 s.push(u.Qo(i.c,$.Dg===i,new A.b6I(e,i)))}w.push(u.TG("\u0628\u0639\u062f \u0645\u0627 \u0627\u0644\u0633\u0648\u0631\u0629 \u062a\u062e\u0644\u0635",s))
 s=B.a([],o)
 for(j=0;j<4;++j){h=D.FU[j]
-s.push(u.Qo(E.aZ(h===C.d.qr(h)?C.d.bT(h):h)+"\xd7",$.Me===h,new A.b6J(e,h)))}w.push(u.TG("\u0627\u0644\u0633\u0631\u0639\u0629",s))
+s.push(u.Qo(E.aZ(h===C.d.qr(h)?C.d.bO(h):h)+"\xd7",$.Me===h,new A.b6J(e,h)))}w.push(u.TG("\u0627\u0644\u0633\u0631\u0639\u0629",s))
 if(r!=null&&r.a>=0)s="\u0645\u0624\u0642\u062a \u0627\u0644\u0646\u0648\u0645 \u2014 \u0647\u064a\u0642\u0641 \u0628\u0639\u062f "+E.aZ(C.e.bc(r.a,6e7)+1)+" \u062f\u0642\u064a\u0642\u0629"
 else s=e.at===D.vK?"\u0645\u0624\u0642\u062a \u0627\u0644\u0646\u0648\u0645 \u2014 \u0647\u064a\u0642\u0641 \u0622\u062e\u0631 \u0627\u0644\u0633\u0648\u0631\u0629":"\u0645\u0624\u0642\u062a \u0627\u0644\u0646\u0648\u0645"
 q=B.a([],o)
@@ -1915,7 +1915,7 @@ D.a0u=new B.ha(3,null,null,null,null,C.q,null,null,null,null)
 D.az9=new B.a4(C.iF,D.a0u,null)
 D.aB3=new B.Q("https://mp3quran.net/api/v3/reciters?language=ar",C.mz)
 D.aCb=new B.Q("https://www.mp3quran.net/api/v3/reciters?language=ar",C.zA)
-D.aDt=new B.bJ("\u062d\u0641\u0635 \u0639\u0646 \u0639\u0627\u0635\u0645",D.v5,null)
+D.aDt=new B.bK("\u062d\u0641\u0635 \u0639\u0646 \u0639\u0627\u0635\u0645",D.v5,null)
 D.aHT=new G.a91(7)
 D.Y0=new B.dh(C.jn,C.jn,C.a8,C.a8)
 D.aHU=new B.cn(D.Y0,C.v)
@@ -1958,4 +1958,4 @@ x($,"c7B","te",()=>{var w=new A.Mc(D.ln,B.bvp(0,!1),B.bvp(0,!1),$.a7()),v=B.bGe(
 w.a!==$&&B.b8()
 w.a=v
 return w})})()};
-(a=>{a["TFGcgEVUi0RJdt+lBqnez3ahMmo="]=a.current})($__dart_deferred_initializers__);
+(a=>{a["NLP4udpxaA1dlIvwhbXMbkFG7jE="]=a.current})($__dart_deferred_initializers__);
